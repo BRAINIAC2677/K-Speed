@@ -1420,7 +1420,6 @@ function keyTyped(event) {
   if (typed === testString[curCharIndex]) {
     score += 1;
     curCharIndex += 1;
-    scoreBox.innerText = `Score: ${score}`;
     if (curCharIndex == testString.length) {
       generateTestString(wordPerTurn);
     }
@@ -1434,6 +1433,7 @@ function keyTyped(event) {
   } else {
     score -= 3;
   }
+  scoreBox.innerText = `Score: ${score}`;
 }
 
 startBtn.addEventListener("click", started);
