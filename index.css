@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-primary: #2f312d;
+  --clr-secondary: rgb(10, 7, 7);
+  --clr-accent: rgb(240, 80, 80);
+  --fs-h1: 3em;
+  --fs-h2: 2.25em;
+  --fs-p: 1.5em;
+  --mg-1: 1em;
+  --mg-2: 0.5em;
+  --pd-1: 2em;
+  --pd-2: 1em;
+  --pd-3: 0.5em;
+}
+
+body {
+  background-color: var(--clr-primary);
+  font-family: "Courgette", cursive;
+  height: 100vh;
+  padding: 0 var(--pd-1);
+}
+
+.container {
+  align-items: center;
+  display: grid;
+  grid-template: 25vh 10vh 15vh 30vh 15vh / repeat(2, 1fr);
+  justify-items: center;
+}
+
+.title {
+  color: var(--clr-accent);
+  font-weight: bolder;
+  font-size: var(--fs-h1);
+  grid-column: 1/-1;
+}
+
+.timer-box {
+  color: var(--clr-accent);
+  font-size: var(--fs-h2);
+  font-weight: bold;
+  grid-column: 1/-1;
+  position: relative;
+}
+
+.timer-box::before {
+  background-color: var(--clr-accent);
+  bottom: -5px;
+  content: "";
+  height: 2px;
+  position: absolute;
+  width: 100%;
+}
+
+.score-box,
+.speed-box {
+  color: var(--clr-accent);
+  font-size: var(--fs-h2);
+}
+
+.test-text {
+  background-color: var(--clr-secondary);
+  border-radius: 15px;
+  color: rgb(233, 218, 16);
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-size: var(--fs-p);
+  grid-column: 1/-1;
+  height: 80%;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  padding: var(--pd-2);
+  width: 100%;
+}
+
+.start-btn {
+  background-color: var(--clr-secondary);
+  border: 0;
+  border-radius: 15px;
+  color: var(--clr-accent);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--fs-p);
+  font-weight: bold;
+  grid-column: 1/-1;
+  grid-row: 5;
+  outline: none;
+  padding: 0.3em 2.5em;
+}
+
+.start-btn:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-secondary);
+}
+
+.highlight {
+  background-color: rgb(241, 245, 244);
+  color: var(--clr-secondary);
+}
+
+input {
+  border: 0;
+  height: 0;
+  width: 0;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --pd-1: 6em;
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --pd-1: 12em;
+  }
+}
