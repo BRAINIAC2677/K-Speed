@@ -1431,6 +1431,8 @@ function keyTyped(event) {
       speedBox.innerText = `WPM: ${Math.floor((wordCount / (60 - time)) * 60)}`;
     }
     testText.innerHTML = createHtml();
+  } else {
+    score -= 3;
   }
 }
 
